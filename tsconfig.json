@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",
     "module": "CommonJS",
     "strict": true,
     "outDir": "lib",
@@ -10,7 +10,7 @@
     "sourceMap": true,
     "typeRoots": ["node_modules/@types"],
     "skipLibCheck": true,
-    "types": ["@types/jest"],
+    "types": ["@types/jest", "@types/node"],
     "rootDir": "src"
   },
   "include": ["src/**/*"]

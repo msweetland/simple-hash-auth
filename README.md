@@ -1,2 +1,2 @@
-# simple-survey
-Simple js survey library
+# easy-auth
+easy auth
