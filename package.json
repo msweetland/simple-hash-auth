@@ -1,7 +1,7 @@
 {
-  "name": "easy-auth",
+  "name": "simple-hash-auth",
   "version": "1.0.0",
-  "description": "authentication service for hashing users",
+  "description": "Securely save passwords in any data store.",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
@@ -12,6 +12,7 @@
     "email": "mjsweetland@gmail.com",
     "name": "Michael Sweetland"
   },
+  "repository": "",
   "license": "MIT",
   "dependencies": {
     "@types/jest": "^25.1.1",
