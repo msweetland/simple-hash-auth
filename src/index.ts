@@ -26,3 +26,36 @@ export const authUser = (password: string, storageHash: string): boolean => {
   const data = hasher.update(salted_password, 'utf8');
   return hashedPassword === data.digest('hex');
 };
+
+export class AuthWrapper {
+  write: WriteUserCallBack;
+  read: ReadUserCallBack;
+  onAuthSuccess: OnAuth;
+  onAuthFailure: VoidFunction;
+  constructor(
+    writeUserCallback: WriteUserCallBack,
+    readUserCallback: ReadUserCallBack,
+    onAuthSuccess: OnAuth,
+    onAuthFailure: VoidFunction
+  ) {
+    this.write = writeUserCallback;
+    this.read = readUserCallback;
+    this.onAuthSuccess = onAuthSuccess;
+    this.onAuthFailure = onAuthFailure;
+  }
+
+  public createUser = (username: string, password: string) => {
+    const user = createUser(username, password);
+    this.write(user);
+  };
+
+  public authenticateUser = (username: string, password: string) => {
+    const userObj = this.read(username);
+    const isValid = authUser(password, userObj.storageHash);
+    if (isValid) {
+      this.onAuthSuccess(username);
+    } else {
+      this.onAuthFailure();
+    }
+  };
+}
