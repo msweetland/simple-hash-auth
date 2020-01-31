@@ -1,0 +1,34 @@
+{
+  "name": "easy-auth",
+  "version": "1.0.0",
+  "description": "authentication service for hashing users",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "author": {
+    "email": "mjsweetland@gmail.com",
+    "name": "Michael Sweetland"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "^25.1.1",
+    "@types/node": "^13.5.3",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.1.0",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}

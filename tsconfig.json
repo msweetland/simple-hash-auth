@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "strict": true,
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types"],
+    "skipLibCheck": true,
+    "types": ["@types/jest"],
+    "rootDir": "src"
+  },
+  "include": ["src/**/*"]
+}
